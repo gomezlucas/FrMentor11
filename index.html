@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!--css file-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--fontawesome file-->
+    <script src="./js/all.js"></script>
+    <title> Front End Mentor Challenge - Rest Countries Api </title>
+</head>
+
+<body class="dark">
+    <!--Pre Loader-->
+    <div class="preloader-container">
+        <img src="./images/loading.svg" />
+        <h4 class="preloader-text">Loading Website...</h4>
+    </div>
+    <!--End Pre Loader-->
+
+    <nav>
+        <div class="navbar-container">
+            <h1>Where in the world? </h1>
+            <button class="navbar-button">
+                <i class="fas fa-moon"></i>
+                <h3 class="navbar-button__info"> Dark Mode </h3>
+            </button>
+        </div>
+    </nav>
+    <header>
+
+        <form action="" class="header-form" type="submit">
+            <div class="header-form__input">
+                <input type="text" placeholder="Search for a country..." name="country"
+                    aria-label="Search for a country..." class="header-form__country" />
+                <i class="fas fa-search magnefier"></i>
+            </div>
+            <div class="header-form__select">
+                <select name="select" class="header-form__region">
+                    <option value="" selected> Filter by Region </option>
+                    <option value="africa">Africa</option>
+                    <option value="americas">America</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe"> Europe</option>
+                    <option value="oceania"> Oceania</option>
+                </select>
+                <i class="fas fa-angle-down angleDown"></i></div>
+        </form>
+        <div class="cards-container" id="cards-container">
+            <!--card
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://restcountries.eu/data/afg.svg" alt="">
+                </div>
+                <div class="card-info">
+                <h2 class="card-name"> Germany</h2>
+                    <p><strong>Population:</strong> 81.770.000</p>
+                    <p><strong>Region:</strong> Europe</p>
+                    <p><strong>Capital:</strong> Berlin</p>
+                </div>
+            </div>
+            end card-->
+        </div>
+    </header>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

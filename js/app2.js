@@ -53,9 +53,15 @@ class UI {
             document.querySelector('.country-info__borders').innerHTML = ''
         } else {
             this.checkBorders(country.borders)
+
         }
     }
 
+    addClickBorder() {
+        let border = document.querySelector("#border-container")
+        let countries = border.querySelector('.country-border').lastChild
+        console.log(countries)
+    }
 
     showLanguages(languagesArr) {
         let number = 0
@@ -78,20 +84,31 @@ class UI {
         const borderInfo = await fetch(borderUrl)
         const borderJson = await borderInfo.json()
         const border = await borderJson.name
+        const code = await borderJson.alpha3Code
 
-        return border
+        return { border, code }
     }
 
     showBorders(data) {
+        console.log(data.border)
         let borderDiv = document.createElement("a")
+
         if (this.theme === 'dark') {
             borderDiv.classList.add("country-border")
-         } else {
-            borderDiv.classList.add("country-border-light","country-border")
-           }
-   
-           borderDiv.textContent = data
+        } else {
+            borderDiv.classList.add("country-border-light", "country-border")
+        }
+
+        borderDiv.textContent = data.border
+        borderDiv.dataset.code = data.code
         this.borderContainer.appendChild(borderDiv)
+
+        borderDiv.addEventListener('click', function (event) {
+            console.log(event.target.dataset.code)
+            sessionStorage.setItem('country', event.target.dataset.code);
+            document.location.target = "_blank";
+            document.location.href = "country.html";
+        })
 
     }
 
@@ -100,6 +117,7 @@ class UI {
         bordersCode.forEach(border => {
             this.fetchBorder(border)
                 .then(data => {
+
                     this.showBorders(data)
 
                 })

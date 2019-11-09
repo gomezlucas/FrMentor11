@@ -413,6 +413,7 @@ body {
   margin: 0 0.4rem;
   margin-bottom: 1rem;
   transition: var(--theme-change-timing);
+  cursor: pointer;
 
 }
 

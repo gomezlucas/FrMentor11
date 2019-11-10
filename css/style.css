@@ -76,6 +76,16 @@ body {
   transition: var(--theme-change-timing);
 }
 
+@media screen and (max-width: 500px){
+  .navbar-container{
+    padding: 1.5rem 1rem 1.5rem 1rem;
+     }
+          .header-form{
+       padding: 3rem 1rem 1rem 1rem;
+     }
+
+}
+
 .light-navbar-container {
   background: var(--white);
   color: var(--veryDarkBlue);
@@ -214,6 +224,13 @@ body {
   }
 }
 
+@media screen and (max-width: 500px){
+            .header-form{
+       padding: 3rem 1rem 1rem 1rem;
+     }
+
+}
+
 /* Cards*/
 
 .cards-container {
@@ -330,6 +347,8 @@ body {
 .header-country {
   padding: 3rem;
 }
+
+ 
 
 .country-container {
   display: flex;
@@ -457,3 +476,13 @@ body {
     margin-top: 1rem;
   }
 }
+
+@media screen and (max-width: 500px){
+  .header-country {
+        padding: 3rem 2rem 1rem 2rem;
+    }
+     
+  .country-lists{
+    padding-bottom: 1rem;
+  }  
+   } 
